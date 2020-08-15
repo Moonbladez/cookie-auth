@@ -2,8 +2,8 @@ import { LoginUser, loginUser } from "../lib/auth"
 
 export class LoginForm extends React.Component {
     state = {
-        email: "",
-        password: ""
+        email: "Sincere@april.biz",
+        password: "hildegard.org"
     };
 
 
@@ -20,13 +20,14 @@ export class LoginForm extends React.Component {
 
 
     render() {
+        const { email, password } = this.state
         return (
             <form onSubmit={this.handleSubmit}>
                 <div>
-                    <input type="email" name="email" placeholder="email" onChange={this.handleChange} />
+                    <input type="email" name="email" placeholder="email" onChange={this.handleChange} value={email} />
                 </div>
                 <div>
-                    <input type="password" name="password" placeholder="password" onChange={this.handleChange} />
+                    <input type="password" name="password" placeholder="password" onChange={this.handleChange} value={password} />
                 </div>
                 <button type="submit">Submit</button>
             </form>
